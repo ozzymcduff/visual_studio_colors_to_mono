@@ -32,5 +32,14 @@ class ReadMetaJson
     def initialize
         @meta = JSON.parse(File.read( File.join(File.dirname(__FILE__), "meta.json") ))
     end
-    
+    def colors
+        @meta["colors"].map do |e| 
+            l = {name: e["name"]}
+        end
+    end
+    def text
+        @meta["text"].map do |e|
+            {name: e["name"]}
+        end
+    end
 end
