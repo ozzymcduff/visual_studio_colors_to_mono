@@ -3,7 +3,7 @@ require_relative "../lib/visual_studio_colors_to_mono"
 
 class RenderToJsonTests < Test::Unit::TestCase
     def setup
-        content = File.read( File.join(File.dirname(__FILE__), "./wekeroad-ink.vssettings") )
+        content = File.read( File.join(File.dirname(__FILE__), "wekeroad-ink.vssettings") )
         @c = ConvertToXamarinStudio.new(content)
     end
     def test_can_render

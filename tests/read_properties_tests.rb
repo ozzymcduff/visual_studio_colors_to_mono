@@ -3,7 +3,7 @@ require "test/unit"
 
 class ReadPropertiesTests < Test::Unit::TestCase
     def setup
-        content = File.read( File.join(File.dirname(__FILE__), "./wekeroad-ink.vssettings") )
+        content = File.read( File.join(File.dirname(__FILE__), "wekeroad-ink.vssettings") )
         @c = ConvertToXamarinStudio.new(content)
     end
 

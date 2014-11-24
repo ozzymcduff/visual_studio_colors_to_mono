@@ -25,3 +25,12 @@ class ConvertToXamarinStudio
         end
     end
 end
+
+require 'json'
+
+class ReadMetaJson
+    def initialize
+        @meta = JSON.parse(File.read( File.join(File.dirname(__FILE__), "meta.json") ))
+    end
+    
+end
